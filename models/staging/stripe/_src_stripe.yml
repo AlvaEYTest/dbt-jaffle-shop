@@ -3,5 +3,11 @@ version: 2
 sources:
   - name: stripe
     database: raw
+    schema: stripe
+    description: A clone of a database.
     tables:
       - name: payment
+        description: Raw payments data.
+        columns:
+          - name: id
+            description: Primary Key of the payment table.

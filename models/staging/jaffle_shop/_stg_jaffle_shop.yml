@@ -7,6 +7,11 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: first_name
+        description: First name of the customers. It can be duplicated
+      - name: last_name
+        description: First letter of the customer's last name.
+
   - name: stg_jaffle_shop__orders
     description: The grain of this table is one unique order per row
     columns:
@@ -25,6 +30,8 @@ models:
                 - placed
                 - return_pending
                 - returned
+      - name: order_date
+        description: Date when the order took place.
       - name: customer_id
         data_tests:
           - relationships:
